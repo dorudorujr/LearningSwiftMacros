@@ -9,3 +9,9 @@
 /// produces a tuple `(x + y, "x + y")`.
 @freestanding(expression)
 public macro stringify<T>(_ value: T) -> (T, String) = #externalMacro(module: "LearningSwiftMacrosMacros", type: "StringifyMacro")
+
+@attached(peer)
+public macro CodableKey(name: String) = #externalMacro(module: "LearningSwiftMacrosMacros", type: "CodableKey")
+
+@attached(member, names: arbitrary)
+public macro CustomCodable() = #externalMacro(module: "LearningSwiftMacrosMacros", type: "CustomCodable")

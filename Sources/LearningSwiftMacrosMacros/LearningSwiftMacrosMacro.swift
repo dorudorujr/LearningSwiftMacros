@@ -29,5 +29,7 @@ public struct StringifyMacro: ExpressionMacro {
 struct LearningSwiftMacrosPlugin: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
         StringifyMacro.self,
+        CodableKey.self,
+        CustomCodable.self
     ]
 }
